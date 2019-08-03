@@ -4,7 +4,8 @@ class Application
     resp = Rack::Response.new
  
     current_time = Time.now.to_s
-    current_time.hour
+    time = current_time.hour
+    resp.write "#{time}"
  
     if time < 12
       resp.write "Good Morning!"
