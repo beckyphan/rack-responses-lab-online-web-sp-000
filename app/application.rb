@@ -4,7 +4,7 @@ class Application
     resp = Rack::Response.new
  
     time = Time.now.to_s
-    binding.pry
+    resp.write "#{time}"
  
     if time < "12:00:00"
       resp.write "Good Morning!"
